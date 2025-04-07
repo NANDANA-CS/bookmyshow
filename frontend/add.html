@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>add</title>
+    <link rel="stylesheet" href="/css/add.css">
+    <script src="/js/add.js" defer></script>
+</head>
+
+<body>
+    
+    <div class="wrapper">
+        <div class="navbar">
+            <div class="navbar-left">
+                <img src="/images/BMS_logo_new.png" alt="" class="logo">
+            </div>
+            <div class="navbar-center">
+                <div class="search-wrapper">
+                    <i class="fas fa-search"></i>
+                    <input type="text" placeholder="Search for Movies, Events, Plays, Sports and Activities" id="movieBar" class="movieBar" />
+                </div>
+            </div>
+        
+            <div class="navbar-right">
+                <span class="location">Kochi ▼</span>
+                <a href="/add"><button class="add">Add Movie</button></a>
+        
+                <!-- <div class="hamburger" onclick="this.classList.toggle('active')">
+                    <span></span><span></span><span></span>
+                </div> -->
+
+                <div class="hamburger" onclick="this.classList.toggle('active')">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+            
+
+
+
+    <form action="" id="movies">
+        <label for="" id="lname" class="lname">Movie Name</label><br><br>
+        <input type="text" name="name" id="name" class="name"><br><br>
+
+        <label for="" id="lscreen" class="lscreen">Screen</label><br><br>
+        <!-- <input type="text" name="screen" id="screen" class="screen"><br><br> -->
+        <label for="2k">2K Digital</label> <input type="checkbox" name="2k" id="2k">
+        <label for="4k">4K Digital</label> <input type="checkbox" name="4k" id="4k">
+        <label for="imax">IMAX</label> <input type="checkbox" name="imax" id="imax"><br><br>
+
+        <label for="" id="llang" class="llang">language</label><br><br>
+        <input type="checkbox" name="malayalam" id="mala"><label for="malayalam">Malayalam</label> 
+        <input type="checkbox" name="english" id="eng"><label for="english">English</label> 
+        <input type="checkbox" name="tamil" id="tamil"><label for="tamil">Tamil</label> 
+        <input type="checkbox" name="hindi" id="hindi"><label for="hindi">Hindi</label> 
+        <input type="checkbox" name="telugu" id="telu"><label for="telugu">Telugu</label> 
+        <input type="checkbox" name="kannada" id="kannada"><label for="kannada">Kannada</label><br><br>
+
+        <label for="" id="lduration">Duration</label><br><br>
+        <input type="time" name="duration" id="duration" class="duration" min="01:00" max="02:59" required><br><br>
+
+        <label for="" id="lcategory" class="lcategory">Category</label><br><br>
+        <input type="checkbox" name="Action" id="Action" value="Action"><label for="Action">Action</label> 
+        <input type="checkbox" name="Comedy" id="Comedy" value="Comedy"><label for="Comedy">Comedy</label> 
+        <input type="checkbox" name="Thriller" id="Thriller" value="Thriller"><label for="Thriller">Thriller</label> 
+        <input type="checkbox" name="Crime" id="Crime" value="Crime"><label for="Crime">Crime</label> 
+        <input type="checkbox" name="Romantic" id="Romantic" value="Romantic"><label for="Romantic">Romantic</label> 
+        <input type="checkbox" name="Horror" id="Horror" value="Horror"><label for="Horror">Horror</label> 
+        <input type="checkbox" name="Animation" id="Animation" value="Animation"><label for="Animation">Animation</label> 
+        <input type="checkbox" name="Drama" id="Drama" value="Drama"><label for="Drama">Drama</label> 
+        <input type="checkbox" name="Sci-fi" id="Sci-fi" value="Sci-fi"><label for="Sci-fi">Sci-fi</label><br><br>
+
+        <label for="" id="lcertificate" class="lcertificate">Certificate</label><br><br>
+        <select name="certificate" id="certificate">
+            <option value="" hidden>Select</option>
+            <option value="U">U</option>
+            <option value="U/A">U/A</option>
+            <option value="A">A</option>
+         </select><br><br>
+
+        <label for="" id="lrel" class="lrel">Releasing Date</label><br><br>
+        <input type="date" name="relsdate" id="relsdate" class="relsdate"><br><br>
+
+
+        <div id="testdate" class="testdate"></div><br><br>
+
+
+        <label for="poster" id="lposter" class="lposter">Poster: </label>
+        <input type="file" name="poster" id="poster" class="poster" accept="image/webp, image/png, image/jpg, image/jpeg">
+        <div id="posterprev"></div><br><br>
+        
+        <label for="banner" id="lbanner" class="lbanner">Banner: </label>
+        <input type="file" name="banner" id="banner" class="banner" accept="image/webp, image/png, image/jpg, image/jpeg">
+        <div id="bannerprev"></div><br><br>
+        
+        <input type="submit" value="Submit" id="submit" class="submit">
+    </form>
+</div>
+
+</body>
+</html>

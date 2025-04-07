@@ -1,0 +1,286 @@
+*{
+    box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+body,html{
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Roboto, sans-serif;
+    background-color: #f8f9fa;
+    max-width: 100%;
+    overflow-x: hidden;
+}
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 5%;
+    background-color: #ffffff;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    flex-wrap: wrap;
+}
+
+.navbar-left img.logo {
+    height: 40px;
+}
+
+.navbar-center {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+}
+
+.search-wrapper {
+    position: relative;
+    width: 100%;
+    max-width: 600px;
+}
+
+.search-wrapper i {
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #888;
+}
+
+.movieBar {
+    width: 100%;
+    padding: 10px 10px 10px 40px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 16px;
+    background-color: #fff;
+}
+
+.navbar-right {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.location {
+    font-size: 14px;
+    color: #333;
+    cursor: pointer;
+}
+
+.add {
+    background-color: #f84565;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.add:hover {
+    background-color: #d5304e;
+}
+.hamburger {
+    width: 24px;
+    height: 18px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    cursor: pointer;
+}
+
+.hamburger span {
+    display: block;
+    height: 3px;
+    background-color: #333;
+    border-radius: 2px;
+    transition: 0.3s ease;
+}
+.lower{
+    width: 100%;
+    padding: 30px 5%;
+    background-color: #f4f5f4;
+}
+.paras {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+  }
+  
+.para1 span,.para2 span {
+    margin: 0 15px;
+    font-weight: 500;
+    color: #333;
+    cursor: pointer;
+}
+  
+.para1 span:hover,.para2 span:hover {
+    color: #f84565;
+}
+  
+hr {
+    margin: 10px 0;
+    border-color: #ccc;
+}
+.cardSection {
+    padding: 20px 0;
+  }
+  
+.cardSection > span {
+    font-size: 24px;
+    font-weight: 600;
+    display: block;
+    margin-bottom: 20px;
+}
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+  }
+  
+.card {
+    width: 100%;
+    max-width: 230px;
+    border-radius: 10px;
+    overflow: hidden;
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+  
+.card:hover {
+    transform: translateY(-5px);
+}
+.card img {
+    width: 100%;
+    aspect-ratio: 2 / 3; 
+    object-fit: cover;
+    display: block;
+  }
+  
+  
+.card p {
+    margin: 10px;
+    font-size: 16px;
+    font-weight: bold;
+}
+  
+.card span {
+    margin: 0 10px 10px;
+    font-size: 14px;
+    color: gray;
+}
+
+
+.nav-right {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-left: auto;
+  }
+  
+  .hamburger {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .hamburger span {
+    width: 25px;
+    height: 3px;
+    background: black;
+    transition: all 0.3s ease;
+  }
+  
+  
+  
+  /* Button Enhancements */
+  .add {
+    background-color: #f84565;
+    color: white;
+    padding: 8px 18px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: 600;
+    
+  }
+  
+  .add:hover {
+    background-color: #d32f45;
+  }
+  
+
+ /* responsive */
+  @media (min-width: 1024px) {
+    .preview-section {
+      padding: 60px 8%;
+    }
+  
+    .about-movie {
+      padding: 60px 8%;
+    }
+  }
+  
+
+@media (max-width: 768px) {
+    .navbar {
+      flex-direction: column;
+      align-items: stretch;
+    }
+
+    
+    .add {
+      align-self: flex-start;
+      margin-right: auto;
+    }
+
+    .hamburger {
+        align-self: flex-end;
+        margin-left: auto;
+    }
+    
+    .paras {
+      flex-direction: column;
+      gap: 15px;
+      text-align: center;
+    }
+  
+    .cardSection > span {
+      text-align: center;
+    }
+  
+    .card {
+      width: 100%;
+      max-width: 300px;
+    }
+  }
+  
+
+  @media (max-width: 480px) {
+    .movieBar {
+      font-size: 14px;
+      padding: 8px 8px 8px 35px;
+    }
+    
+    /* .hamburger {
+        align-self: flex-end;
+        margin-left: auto;
+    }
+     */
+    .add {
+      width: 100%;
+    }
+  
+    .search-wrapper {
+      max-width: 100%;
+    }
+  }

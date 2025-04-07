@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>preview</title>
+    <link rel="stylesheet" href="css/preview.css" />
+    <script src="js/preview.js" defer></script>
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <div class="navbar">
+        <img src="/images/BMS_logo_new.png" alt="Logo" class="logo" />
+
+        <div class="search-wrapper">
+            <i class="fas fa-search"></i>
+            <input type="text" placeholder="Search for Movies, Events, Plays, Sports and Activities" class="movieBar" />
+        </div>
+
+        <a href="/add"><button class="signin">Add Movie</button></a>
+
+        <div class="hamburger" onclick="this.classList.toggle('active')">
+            <span></span><span></span><span></span>
+        </div>
+    </div>
+
+    <!-- Navigation Options -->
+    <div class="under">
+        <div class="paras">
+            <div class="para1">
+                <span>Movies</span>
+                <span>Stream</span>
+                <span>Events</span>
+                <span>Place</span>
+                <span>Sports</span>
+                <span>Activities</span>
+            </div>
+            <div class="para2">
+                <span>ListYourShow</span>
+                <span>Corporates</span>
+                <span>Offers</span>
+                <span>Gift Cards</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Movie Preview Section -->
+
+
+    <div class="preview-section" id="preview-section">
+        <div id="poster"></div>
+        <div id="movie-info"></div>
+    </div>
+</body>
+</html>

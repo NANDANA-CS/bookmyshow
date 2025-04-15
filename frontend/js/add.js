@@ -94,7 +94,7 @@ document.getElementById("movies").addEventListener("submit",async(e)=>{
 
     
     try {
-        const res = await fetch("http://localhost:4000/add",{
+        const res = await fetch("http://localhost:8000/api/movie/add",{
             headers:{"Content-Type":"application/json"},
             method:"POST",
             body:JSON.stringify({name,screen,language,duration,certificate,category,relsdate,poster,banner})

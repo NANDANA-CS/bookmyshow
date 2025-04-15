@@ -2,11 +2,9 @@ const params = new URLSearchParams(window.location.search)
 const id = params.get("id")
 
 async function loadmovie(){
-    const res = await fetch(`http://localhost:4000/getmovie/${id}`)
+    const res = await fetch(`http://localhost:8000/api/movie/getmovie/${id}`)
     const data = await res.json()
     console.log(data);
-    
-
     data.forEach((movie)=>{
     
             document.getElementById("name").value = movie.name
@@ -113,7 +111,7 @@ document.getElementById("movies").addEventListener("submit",async(e)=>{
         }
     }
     try {
-        const res = await fetch(`http://localhost:4000/update/${id}`,{
+        const res = await fetch(`http://localhost:8000/update/${id}`,{
             headers:{"Content-Type":"application/json"},
             method:"POST",
             body:JSON.stringify({name,screen,language,duration,certificate,category,relsdate})

@@ -11,3 +11,8 @@ const movieSchema=new mongoose.Schema({
     banner:{type:String,required:true},
 })
 export default mongoose.model.movies||mongoose.model("movie",movieSchema)
+
+
+
+
+

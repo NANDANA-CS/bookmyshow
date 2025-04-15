@@ -1,11 +1,10 @@
 console.log("index.js");
 
 async function loadData() {
-    const res= await fetch("http://localhost:4000/load")
+    const res= await fetch("http://localhost:8000/api/movie/load")
     console.log(res);
     const data=await res.json()
     console.log(data);  
-
 let str=" "
 data.forEach(movie => {
     str+=`

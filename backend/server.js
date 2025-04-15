@@ -6,6 +6,9 @@ import url from "url"
 import cors from 'cors'
 import movieRoutes from "./routes/movie_routes.js";
 import userRoutes from "./routes/user_routes.js";
+import env from "dotenv"
+env.config()
+
 
 
 const app = express()

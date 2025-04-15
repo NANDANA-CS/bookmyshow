@@ -1,72 +1,74 @@
-<!DOCTYPE html>
-<html lang="en">
+    <!DOCTYPE html>
+    <html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>index</title>
-    <link rel="stylesheet" href="/css/index.css">
-    <script src="/js/index.js" defer></script>
-</head>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>index</title>
+        <link rel="stylesheet" href="/css/index.css">
+        <script src="/js/index.js" defer></script>
+    </head>
 
-<body>
-    <div class="wrapper">
-        <div class="navbar">
-            <div class="navbar-left">
-                <img src="/images/BMS_logo_new.png" alt="" class="logo">
-            </div>
-            <div class="navbar-center">
-                <div class="search-wrapper">
-                    <i class="fas fa-search"></i>
-                    <input type="text" img="images/62869611-8c47-44a8-974b-b05b5ad27852.svg"
-                        placeholder="Search for Movies, Events, Plays, Sports and Activities" id="movieBar"
-                        class="movieBar" />
+    <body>
+        <div class="wrapper">
+            <div class="navbar">
+                <div class="navbar-left">
+                    <img src="/images/BMS_logo_new.png" alt="" class="logo">
+                </div>
+                <div class="navbar-center">
+                    <div class="search-wrapper">
+                        <i class="fas fa-search"></i>
+                        <input type="text" img="images/62869611-8c47-44a8-974b-b05b5ad27852.svg"
+                            placeholder="Search for Movies, Events, Plays, Sports and Activities" id="movieBar"
+                            class="movieBar" />
+                    </div>
+                </div>
+
+                <div class="navbar-right">
+                    <span class="location">Kochi ▼</span>
+                    <a href="/add"><button class="add">Add Movie</button></a>
+                    <a href="/signup"><button class="add">Sign up</button></a>
+                    <a href="/signin"><button class="add">Login</button></a>
+                    <span id="user"></span>
+
+
+
+                    <div class="hamburger" onclick="this.classList.toggle('active')">
+                        <span></span><span></span><span></span>
+                    </div>
                 </div>
             </div>
 
-            <div class="navbar-right">
-                <span class="location">Kochi ▼</span>
-                <a href="/add"><button class="add">Add Movie</button></a>
-                <a href="/signup"><button class="add">Sign up</button></a>
-                <a href="/signin"><button class="add">Login</button></a>
 
 
-                <div class="hamburger" onclick="this.classList.toggle('active')">
-                    <span></span><span></span><span></span>
+            <!-- footer -->
+            <div class="footer">
+                <div class="paras">
+                    <div class="para1">
+                        <span>Movies</span>
+                        <span>Stream</span>
+                        <span>Events</span>
+                        <span>Place</span>
+                        <span>Sports</span>
+                        <span>Activities</span>
+                    </div>
+                    <div class="para2">
+                        <span>ListYourShow</span>
+                        <span>Corporates</span>
+                        <span>Offers</span>
+                        <span>Gift Cards</span>
+                    </div>
+                </div>
+                <hr>
+
+
+                <!-- card -->
+                <div class="cardSection">
+                    <span>Recommended Movies</span>
+                    <div class="cards-container" id="cards"></div>
                 </div>
             </div>
         </div>
+    </body>
 
-
-
-        <!-- footer -->
-        <div class="footer">
-            <div class="paras">
-                <div class="para1">
-                    <span>Movies</span>
-                    <span>Stream</span>
-                    <span>Events</span>
-                    <span>Place</span>
-                    <span>Sports</span>
-                    <span>Activities</span>
-                </div>
-                <div class="para2">
-                    <span>ListYourShow</span>
-                    <span>Corporates</span>
-                    <span>Offers</span>
-                    <span>Gift Cards</span>
-                </div>
-            </div>
-            <hr>
-
-
-            <!-- card -->
-            <div class="cardSection">
-                <span>Recommended Movies</span>
-                <div class="cards-container" id="cards"></div>
-            </div>
-        </div>
-    </div>
-</body>
-
-</html>
+    </html>

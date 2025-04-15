@@ -1,5 +1,7 @@
 import userSchema from "../models/usermodels.js"
 import bcrypt from "bcrypt"
+import jwt from "jsonwebtoken"
+
 
 
 // export const adduser = async (req, res) => {
@@ -87,10 +89,21 @@ export async function login(req,res){
       if (!isPasswordMatch) {
         return res.status(400).json({message:"invalid password"})
       }
-      res.status(200).json({message:"Login Successfull",user:userExist})
+      const token=await jwt.sign({id:userExist._id},process.env.JWT_KEY,{expiresIn:"24h"})
+      res.status(200).json({message:"Login Successfull",token})
       console.log(userExist);
     }catch(e){
+      console.log(e);
       
        return res.status(500).json({message:"server error"})
     }
+}
+
+
+
+export async function home(req,res) {
+  console.log("end point");
+  console.log(req.user);
+  const userdata=await userSchema.findOne({_id:req.user})
+  res.status(200).send({email:userdata.email})
 }

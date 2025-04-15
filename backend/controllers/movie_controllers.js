@@ -1,4 +1,7 @@
+import e from "cors";
 import movieSchema from "../models/bmsmodel.js"
+import userSchema from "../models/usermodels.js"
+
 
 
 export const add =async (req,res) => {
@@ -20,16 +23,42 @@ export const add =async (req,res) => {
 }
 
 
-export const load=async (req,res) => {
-    try {
-            console.log("inside load");
+// export const load=async  (req,res) => {
+
+//     console.log(req.user);
+//     const userdata=await userSchema.findOne({_id:req.user})
+//     res.status(200).send({email:userdata.email})
+//     console.log("inside load movie");
+    
+
+//     try {
+//             console.log("inside load");
             
-            const data = await movieSchema.find()
-            res.status(200).send(data)
-        } catch (error) {
-            res.status(500).send({ error })
-        }
+//             const data = await movieSchema.find()
+//             res.status(200).send(data)
+//         } catch (error) {
+//             res.status(500).send({ error })
+//         }
+// }
+
+
+export const load = async (req, res) => {
+    try {
+        console.log("Inside load movie");
+        console.log(req.user);
+        
+
+        const userdata = await userSchema.findById(req.user)
+        const movies = await movieSchema.find()
+
+        res.status(200).send({ userdata, data: movies })
+    } catch (error) {
+        console.error("Load error:", error);
+        res.status(500).send({ error })
+    }
 }
+
+
 
 export const preview=async (req,res) => {
        try {

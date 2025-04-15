@@ -15,6 +15,12 @@ async function login(event){
         })
         const data=await res.json()
         console.log(data);
+
+        if (res.status===200) {
+            localStorage.setItem("token",data.token)
+            alert(data.message)
+            window.location.href="/"
+        }
         
     } catch (error) {
         console.log(error);
